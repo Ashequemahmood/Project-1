@@ -14,7 +14,7 @@ The application provided customer to add their shopping lists and shopping-list-
   cd Project-1
   <li>Make sure that the Docker is installed in your system and it's up and running</li>
   <li>Run the following command</li>
-  docker compose up --build
+  docker compose up
   <li>Your app should be available in http://localhost:7777</li>
 </ol>
 
