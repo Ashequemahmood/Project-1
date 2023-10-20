@@ -1,0 +1,21 @@
+<% layout("./layouts/layout.eta") %>
+<%~ includeFile("./partials/menu.eta") %>
+<h1><%= it.heading %></h1>
+<h3>Statistics</h3>
+<ul>
+    <% if(it.shoppingLists) { %>
+        <li>Shopping lists: <%= it.shoppingLists %></li>
+    <% } else { %> 
+        <p>No shopping lists yet.</p>
+    <% } %>
+
+    <% if(it.shoppingListItems) { %>
+        <li>Shopping list items: <%= it.shoppingListItems %> </li>
+    <% } else { %>
+        <p>No shopping lists yet.</p>
+    <% } %>
+
+    
+</ul
+
+ 
