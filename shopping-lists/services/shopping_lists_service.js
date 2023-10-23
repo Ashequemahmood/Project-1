@@ -26,21 +26,21 @@ const findById = async (id) => {
 };
 
 const countShoppingLists = async () => {
-  await sql`SELECT COUNT(*) from shopping_lists`;
-  // if (rows && rows.length > 0) {
-  //   return rows[0].count;
-  // }
+  const rows = await sql`SELECT COUNT(*) from shopping_lists`;
+  if (rows && rows.length > 0) {
+    return rows[0].count;
+  }
 
-  // return false;
+  return false;
 }
 
 const countShoppingListsItems = async () => {
-  await sql`SELECT COUNT(*) from shopping_list_items`;
-  // if (rows && rows.length > 0) {
-  //   return rows[0].count;
-  // }
+  const rows = await sql`SELECT COUNT(*) from shopping_list_items`;
+  if (rows && rows.length > 0) {
+    return rows[0].count;
+  }
 
-  // return false;
+  return false;
 }
 
 export { create, findAllActiveShopping_lists, findById, deactivateById, countShoppingLists, countShoppingListsItems};
