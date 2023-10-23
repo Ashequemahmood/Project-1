@@ -27,6 +27,7 @@ const findById = async (id) => {
 
 const countShoppingLists = async () => {
   const rows = await sql`SELECT COUNT(*) from shopping_lists`;
+  console.log(rows[0].count)
   if (rows && rows.length > 0) {
     return rows[0].count;
   }
@@ -43,4 +44,5 @@ const countShoppingListsItems = async () => {
   return false;
 }
 
-export { create, findAllActiveShopping_lists, findById, deactivateById, countShoppingLists, countShoppingListsItems};
+export { countShoppingLists, countShoppingListsItems, create, deactivateById, findAllActiveShopping_lists, findById };
+

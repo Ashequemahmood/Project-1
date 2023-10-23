@@ -7,5 +7,6 @@ if (Deno.env.get("DATABASE-URL")) {
   sql = postgres({});
 }
 
+
 export { sql };
 
